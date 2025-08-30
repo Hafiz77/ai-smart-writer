@@ -15,7 +15,9 @@ import { HttpClient } from '@angular/common/http';
       <li *ngFor="let it of items; let i = index" style="margin-bottom:10px; padding:8px; background:#fff; border-radius:8px;">
         <div style="display:flex; justify-content:space-between;">
           <div>
-            <strong>{{it.type}}</strong> <span style="color:#666; font-size:12px;">{{ it.timestamp | date:'short' }}</span>
+            <strong>{{it.type}}</strong>
+            <span style="display:inline-block; width:16px;"></span>
+            <span class="date" style="color:#007bff; font-size:0.95em; background:#e0eafc; padding:2px 8px; border-radius:6px; font-weight:500;">{{ it.timestamp | date:'medium' }}</span>
             <div style="margin-top:6px; white-space:pre-wrap;">{{ it.result }}</div>
           </div>
           <div style="display:flex; flex-direction:column; gap:6px;">

@@ -40,7 +40,10 @@ import { CommonModule } from '@angular/common';
       <button class="btn" [disabled]="!output" (click)="saveHistory()">Save</button>
     </div>
     <ng-container *ngIf="output">
-      <div style="margin-top:12px;" class="output">{{output}}</div>
+      <div style="margin-top:12px; padding:16px; background:linear-gradient(90deg,#e0eafc,#cfdef3); border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.07); font-size:0.98em; color:#222; font-family:'Segoe UI',sans-serif; white-space:pre-line;">
+        <span style="font-weight:600; color:#007bff;">AI Output:</span><br>
+        {{output}}
+      </div>
     </ng-container>
     <div *ngIf="speechLoading" style="color: #007bff; margin-top:8px;">🎤 Listening... Please speak now.</div>
   </div>
