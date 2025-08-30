@@ -37,12 +37,13 @@ import { HistoryService } from '../services/history.service';
 
       <div style="margin-top:12px;" class="output">{{output}}</div>
     }
-    <div style="margin-top:10px;">
+    <div style="margin-top:10px;" class="pr-3">
       <input type="file" (change)="onFileChange($event)" accept=".docx" />
       <button class="btn" (click)="getDocxSummary()" [disabled]="docxLoading || !docxFile">
         <span *ngIf="docxLoading">⏳ Summarizing...</span>
         <span *ngIf="!docxLoading">Summarize Docx</span>
       </button>
+      <span style="display:inline-block; width:8px;"></span>
       <button class="btn" (click)="recheckDocx()" [disabled]="docxLoading || !docxFile">Recheck</button>
     </div>
     <div *ngIf="docxSummary">
